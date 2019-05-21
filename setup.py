@@ -14,6 +14,11 @@ setuptools.setup(
 	long_description_content_type = "text/markdown",
 	url = "https://github.com/Laukei/flask-censor",
 	packages = ['flask_censor'],
+    #data_files=[('flask_censor/data', ['flask_censor/data/wordlist.txt']), ],
+ 	package_data={
+ 	    '': ['flask_censor/data/wordlist.txt'],
+	 },
+	include_package_data=True,
 	classifiers = [
 		"Programming Language :: Python :: 3",
 		"License :: OSI Approved :: MIT License",
